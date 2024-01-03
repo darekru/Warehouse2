@@ -14,7 +14,7 @@
             var mainMenu = actionService.GetMenuActionByMenuName("Main");
             for (int i = 0; i < mainMenu.Count;  i++) 
             {
-                Console.WriteLine($"{mainMenu[i].Id}, {mainMenu[i].Name}");
+                Console.WriteLine($"{mainMenu[i].Id}. {mainMenu[i].Name}");
             }
         }
 
