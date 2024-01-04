@@ -12,11 +12,36 @@
             Console.WriteLine("PLease let me know what you want todo:");
 
             var mainMenu = actionService.GetMenuActionByMenuName("Main");
-            for (int i = 0; i < mainMenu.Count;  i++) 
+            for (int i = 0; i < mainMenu.Count; i++)
             {
                 Console.WriteLine($"{mainMenu[i].Id}. {mainMenu[i].Name}");
             }
+
+            var operation = Console.ReadKey();
+            ItemService itemService = new ItemService();
+            switch (operation.KeyChar)
+            {
+                case '1':
+                    var keyInfo = itemService.AddNewItemView(actionService);
+                    var id = itemService.AddNewItem(keyInfo.KeyChar);
+                    break;
+                case '2':
+                    var removeId = itemService.RemoveItemView();
+                    itemService.RemoveItemView(removeId);
+                    break;
+                case '3':
+                    break;
+                case '4':
+                    break;
+                default:
+                    Console.WriteLine("Action you entered does not exist");
+                    break;
+            }
         }
+
+        
+
+
 
         private static MenuActionService Initialize(MenuActionService actionService)
         {
@@ -24,6 +49,11 @@
             actionService.AddNewAction(2, "Remoive item", "Main");
             actionService.AddNewAction(3, "Show details", "Main");
             actionService.AddNewAction(4, "List of items", "Main");
+
+            actionService.AddNewAction(1, "Clothing", "AddNewItemMenu");
+            actionService.AddNewAction(2, "Electronics", "AddNewItemMenu");
+            actionService.AddNewAction(3, "Grocery", "AddNewItemMenu");
+           
 
             return actionService;
         }
