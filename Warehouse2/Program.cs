@@ -6,6 +6,7 @@
         static void Main(string[] args)
         {
             MenuActionService actionService = new MenuActionService();
+            ItemService itemService = new ItemService();
             actionService = Initialize(actionService);
 
             Console.WriteLine("Welcome to warehouse app!");
@@ -18,7 +19,7 @@
             }
 
             var operation = Console.ReadKey();
-            ItemService itemService = new ItemService();
+            
             switch (operation.KeyChar)
             {
                 case '1':
@@ -30,6 +31,8 @@
                     itemService.RemoveItem(removeId);
                     break;
                 case '3':
+                    var detailId = itemService.ItemDetailSelectionView();
+                    itemService.ItemDetailView(detailId);
                     break;
                 case '4':
                     break;
