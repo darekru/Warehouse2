@@ -63,10 +63,17 @@ namespace Warehouse2
 
         public void RemoveItem(int removeId)
         {
+            Item productToRemove = new Item();
             foreach (var item in Items)
             {
+                if (item.Id == removeId)
+                {
+                    productToRemove = item;
+                    break;
+                }
 
             }
+            Items.Remove(productToRemove);
         }
 
     }

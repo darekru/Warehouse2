@@ -27,7 +27,7 @@
                     break;
                 case '2':
                     var removeId = itemService.RemoveItemView();
-                    itemService.RemoveItemView(removeId);
+                    itemService.RemoveItem(removeId);
                     break;
                 case '3':
                     break;

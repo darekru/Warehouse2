@@ -11,10 +11,17 @@ namespace Warehouse2
         private List<MenuAction> menuActions;
 
         public MenuActionService()
+        { 
+            menuActions = new List<MenuAction>();
+        }
+
+        /*
+        public MenuActionService()
         {
             //List<MenuAction> menuActions = new List<MenuAction>()
             this.menuActions = new List<MenuAction>();
         }
+        */
 
         public void AddNewAction(int id, string name, string menuName)
         {
