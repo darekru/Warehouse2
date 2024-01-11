@@ -42,6 +42,10 @@
                     Console.WriteLine("Action you entered does not exist");
                     break;
             }
+
+            Item2 say = new Item2();
+            say.sayHello();
+            say.sayHello2();
         }
 
         

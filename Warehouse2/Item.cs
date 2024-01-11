@@ -14,6 +14,25 @@ namespace Warehouse2
 
         public int TypeId { get; set; }
 
+        public void sayHello()
+        {
+            Console.WriteLine("Say Hello");
+        }
+    }
+
+    public class Item2 : Item
+    {
+    
+        public void sayHello2()
+        {
+            Console.WriteLine("Say Hello 2");
+        }
+
+        public void sayHello ()
+        {
+            Console.WriteLine("Say Hello 3");
+        }
 
     }
+
 }
