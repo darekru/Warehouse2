@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Warehouse.Domain.Common
+namespace Warehouse.Domain.Entity
 {
     public class BaseEntity : AuditableModel
     {

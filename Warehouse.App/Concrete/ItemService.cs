@@ -4,17 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Channels;
 using System.Threading.Tasks;
+using Warehouse.App.Common;
 
-namespace Warehouse2
+namespace Warehouse.App
 {
-    public class ItemService
+    public class ItemService : BaseService<Item>
     {
+        /*
         public List<Item> Items {  get; set; }
 
         public ItemService() 
         {
             Items = new List<Item>();
         }
+        */
 
         public ConsoleKeyInfo AddNewItemView(MenuActionService actionService)
         {
