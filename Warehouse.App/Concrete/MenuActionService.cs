@@ -3,20 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Warehouse.App.Common;
 
-namespace Warehouse2.App.Concrete
+namespace Warehouse2
 {
-    public class MenuActionService : BaseService<MenuAction>
+    public class MenuActionService
     {
-        /*private List<MenuAction> menuActions;
+        private List<MenuAction> menuActions;
 
         public MenuActionService()
         { 
             menuActions = new List<MenuAction>();
         }
 
-        
+        /*
         public MenuActionService()
         {
             //List<MenuAction> menuActions = new List<MenuAction>()

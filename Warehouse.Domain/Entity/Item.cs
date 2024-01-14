@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Warehouse.Domain.Common;
+using Warehouse.Domain.Entity;
 
-namespace Warehouse.Domain
+namespace Warehouse.Domain.Entity
 {
     public class Item : BaseEntity
     {
